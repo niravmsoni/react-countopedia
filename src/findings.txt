@@ -27,3 +27,4 @@
     IMP - When we create constructor, need to pass props to base class i.e. React.Component
     In the constructor, we can create state object and set it to either undefined or 0.
     
+    IMP - State only works with class components. With functional components, we have hooks
