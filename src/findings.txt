@@ -52,3 +52,6 @@
 
     Then, in that case, the first statement is ignored.
     Inorder to mke it count, we need to use new syntax for setState i.e. using Arrow function and pass the state as argument to the function
+
+59.
+    UI changes. Replaced buttons with images and added extra buttons

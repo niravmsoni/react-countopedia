@@ -4,7 +4,7 @@ export default function Header(){
     return(
         <div className="pt-3 pl-2 py-2" style={{borderBotton:"1px solid #777"}}>
             <img src={logo} alt="" style={{height: "35px", verticalAlign: "top"}} />
-            <span className="h2 pt-4 m-2 text-white-50">React Course - CountOpedia</span>
+            <span className="h2 pt-4 m-2 text-white-50">CountOpedia</span>
         </div>
     )
 }
