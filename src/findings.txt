@@ -51,4 +51,4 @@
     Reason -> By the time the first function executes and updates the state value, the second line reads the older state value which is 0.
 
     Then, in that case, the first statement is ignored.
-    Inorder to mke it count, we need to use new syntax for setState i.e. using Arrow function
+    Inorder to mke it count, we need to use new syntax for setState i.e. using Arrow function and pass the state as argument to the function
