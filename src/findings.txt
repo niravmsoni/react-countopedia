@@ -8,3 +8,22 @@
 54.
     Added new functions in counter.jsx to show which button was clicked upon clicking.
     Attached it using onClick event
+
+55.
+    State = Container where we want to store some value and when we can retrieve it when required
+    With class based components, we can define state within constructor.
+
+    constructor(){
+    }
+
+    If we simply add this line in counter class component, it will throw console error.
+    Since, we're using class component, and it extends React.Component, we need to pass props to base class.
+    So, EVEN if we're not consuming any props, we'll need to modify the constructor code to look like this:
+
+    constructor(props){
+        super(props);
+    }
+
+    IMP - When we create constructor, need to pass props to base class i.e. React.Component
+    In the constructor, we can create state object and set it to either undefined or 0.
+    
