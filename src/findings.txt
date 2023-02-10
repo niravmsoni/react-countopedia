@@ -28,3 +28,13 @@
     In the constructor, we can create state object and set it to either undefined or 0.
     
     IMP - State only works with class components. With functional components, we have hooks
+    
+56.
+    IMP - STATE is IMMUTABLE. WE CANNOT DIRECTLY EDIT THE STATE.
+    For Ex: we cannot have this.state.count =1 ;    //Will throw error
+
+    How to modify state? - Use this.setState({object}) method
+
+    Right now, we've used handleAttack and handleDefence method. They're not bound by default
+    We need to bind the this.handleAttack with handleAttack() function.
+    For doing that, in the constructor, we need to write the .bind() method
