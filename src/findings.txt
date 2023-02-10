@@ -4,3 +4,7 @@
 
 53.
     UI changes - Added +1 and -1 buttons
+
+54.
+    Added new functions in counter.jsx to show which button was clicked upon clicking.
+    Attached it using onClick event
