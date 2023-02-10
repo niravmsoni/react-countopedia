@@ -55,3 +55,6 @@
 
 59.
     UI changes. Replaced buttons with images and added extra buttons
+
+60.
+    Added logic for RandomPlay and Reset. Basically modified state with OnClick()
