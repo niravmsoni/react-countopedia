@@ -29,7 +29,7 @@
     
     IMP - State only works with class components. With functional components, we have hooks
     
-56.
+56. How to use state?
     IMP - STATE is IMMUTABLE. WE CANNOT DIRECTLY EDIT THE STATE.
     For Ex: we cannot have this.state.count =1 ;    //Will throw error
 
@@ -38,3 +38,17 @@
     Right now, we've used handleAttack and handleDefence method. They're not bound by default
     We need to bind the this.handleAttack with handleAttack() function.
     For doing that, in the constructor, we need to write the .bind() method
+
+58. 
+    this.setState() =  Async Call.
+
+        handleAttack(){
+        this.setState({count: this.state.count + 100});
+        this.setState({count: this.state.count + 10});
+    }
+
+    if we execute handleAttack() function, it will increment count by 10 and not 110.
+    Reason -> By the time the first function executes and updates the state value, the second line reads the older state value which is 0.
+
+    Then, in that case, the first statement is ignored.
+    Inorder to mke it count, we need to use new syntax for setState i.e. using Arrow function
