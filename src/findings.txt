@@ -1,0 +1,3 @@
+52.
+    Did initial project setup
+    Counter.jsx = Class component and Header.jsx = Functional component
