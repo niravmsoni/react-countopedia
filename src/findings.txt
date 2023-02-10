@@ -1,3 +1,6 @@
 52.
     Did initial project setup
     Counter.jsx = Class component and Header.jsx = Functional component
+
+53.
+    UI changes - Added +1 and -1 buttons
