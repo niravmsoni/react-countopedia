@@ -12,18 +12,38 @@ export default class Counter extends React.Component{
         };
     }
     
-    handleAttack(){
+    handleAttack = () => {
         this.setState((previousState) => {
+            let newCount = previousState.count + Math.round(Math.random() * 10);
             return {
-                count: previousState.count + 1,
+                count: newCount,
             };
         });
     }
 
-    handleDefence(){
+    handleDefence = () => {
         this.setState((previousState) => {
+            let newCount = previousState.count - Math.round(Math.random() * 10);
             return {
-                count: previousState.count - 1,
+                count: newCount,
+            };
+        });
+    }
+
+    handleRandomPlay = () => {
+        let playMode = Math.round(Math.random());
+        if (playMode === 0){
+            this.handleAttack();
+        }
+        else{
+            this.handleDefence();
+        }
+    }
+
+    handleReset = () => {
+        this.setState(() => {
+            return {
+                count: 0,
             };
         });
     }
@@ -31,7 +51,7 @@ export default class Counter extends React.Component{
     render(){
         return(
         <div className="row text-white text-center">
-            <h1>Gane Score: {this.state.count} </h1>
+            <h1>Game Score: {this.state.count} </h1>
             <p>You win at +10 points and lose at -10 points!</p>
             <p>Last Play: </p>
             <p>Game Status: </p>
@@ -54,8 +74,8 @@ export default class Counter extends React.Component{
                 className="p-4 rounded" src={defend} onClick={this.handleDefence}></img>
             </div>
             <div className="col-12 col-md-4 offset-md-4">
-                <button className="btn btn-secondary w-100 mt-2">Random Play</button>
-                <button className="btn btn-warning w-100 mt-2">Reset</button>
+                <button className="btn btn-secondary w-100 mt-2" onClick={this.handleRandomPlay}>Random Play</button>
+                <button className="btn btn-warning w-100 mt-2" onClick={this.handleReset}>Reset</button>
             </div>
         </div>);
     }
